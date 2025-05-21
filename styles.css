@@ -313,6 +313,9 @@
     .header-page__title--hidden{
         display: block;
     }
+    .header-menu__list {
+        gap: 32px;
+    }
     .header-menu__list--grey-line::before{
         display: none;
     }

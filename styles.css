@@ -6,7 +6,6 @@
   }
   
   html, body {
-    font-family: "Roboto Mono", monospace, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -34,17 +33,23 @@
     background: none;
     border: none;
   }
+  /*          FONTS        */
+
+  @font-face{
+    font-family: "TT Lakes";
+    src:
+        local("TT Lakes");
+  }
+  body{
+    font-family: "TT Lakes", sans-serif;
+  }
+
+  /*          HEADER        */
+
 .header-page{
     display: flex;
     padding: 18px 16px;
     justify-content: space-between;
-}
-
-.logo-menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
 }
 .header-page__title{
     align-self: flex-end;
@@ -56,20 +61,16 @@
 .header-page__title--hidden{
     display: none;
 }
-
+.logo-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
 
 .logo-menu__menu-list{
     display: flex;
     align-items: center;
-}
-
-.logo-menu__menu-list::after{
-    content: "";
-    display: none;
-    height: 32px;
-    border-right: 2px solid #EAEAEA;
-    margin-left: 4px;
-    margin-right: 20px;
 }
 
 .logo-menu__button{
@@ -168,6 +169,7 @@
     margin: 32px 0;
     padding-left:24px;
     height: 45px;
+    overflow-x: auto;
 }
 
 .switcher-menu__list{
@@ -178,7 +180,7 @@
 
 .switcher-menu__item{
     white-space: nowrap;
-    border: none;
+    border: 2px solid transparent;
     background-color: transparent;
     text-align: center;
     padding: 8px 16px;
@@ -188,7 +190,13 @@
     letter-spacing: -0.2px;
 }
 
-.switcher-menu__item--active{
+.switcher-menu__item:hover{
+    box-sizing: border-box;
+    border: 2px solid #b8ffec77;
+    border-radius: 6px;
+}
+.switcher-menu__item--active,
+.switcher-menu__item--active:hover{
     border: 2px solid #B8FFEC;
     border-radius: 6px;
 }
@@ -221,7 +229,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: 0.2px;
+    letter-spacing: .2px;
 
 }
 
@@ -252,8 +260,14 @@
 }
 
 @media (min-width: 720px) {
-    body{
+    .logo-menu__menu-list::after{
+        content: "";
+        height: 32px;
+        border-right: 2px solid #EAEAEA;
+        margin-left: 4px;
+        margin-right: 20px;
     }
+    
     .header-menu__cell--hidden{
         display: block;
     }
@@ -287,10 +301,7 @@
 }
 
 @media (min-width: 1120px) {
-    body{
-        overflow: visible;
-        height: 535px;
-    }
+
     .header-page{
         background-color: #F8F8F8;
         padding-left: 0;
@@ -325,9 +336,6 @@
         margin: 0;
         margin-bottom: 10px;
 
-    }
-    .switcher-menu__list {
-        flex-wrap: wrap;
     }
     .about__box{
         padding: 0;

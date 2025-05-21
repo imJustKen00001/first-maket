@@ -1,0 +1,351 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: "Roboto Mono", monospace, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul, ol {
+    list-style: none;
+  }
+  button{
+    background: none;
+    border: none;
+  }
+.header-page{
+    display: flex;
+    padding: 18px 16px;
+    justify-content: space-between;
+}
+
+.logo-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.header-page__title{
+    align-self: flex-end;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+}
+.header-page__title--hidden{
+    display: none;
+}
+
+
+.logo-menu__menu-list{
+    display: flex;
+    align-items: center;
+}
+
+.logo-menu__menu-list::after{
+    content: "";
+    display: none;
+    height: 32px;
+    border-right: 2px solid #EAEAEA;
+    margin-left: 4px;
+    margin-right: 20px;
+}
+
+.logo-menu__button{
+    background: url("icons/burger.svg");
+    margin-right: 16px;
+}
+
+.button{
+    display: block;
+    border: none;
+    width: 40px;
+    min-height: 40px;
+}
+
+.menu-logo__logo{
+    width: 95px;
+}
+
+.header-menu{
+    display: flex;
+
+}
+
+.header-menu__list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-menu__list--grey-line::before{
+    content: "";
+    height: 32px;
+    border-right: 2px solid #EAEAEA;
+    margin-left: 20px;
+    margin-right: 4px;
+}
+
+.header-menu__cell{
+    display: flex;
+    align-items: center;
+}
+
+.header-menu__cell--hidden{
+    display: none;
+}
+
+.header-menu__link-1{
+    background-image: url("icons/call.svg")
+}
+.header-menu__link-2{
+    background-image: url("icons/chat.svg")
+}
+.header-menu__link-3{
+    background-image: url("icons/profile.svg")
+}
+
+.header-menu__link-4{
+    background-image: url("icons/settings.svg")
+}
+
+.header-menu__link-5{
+    background-image: url("icons/checkstatus.svg")
+}
+
+.header-menu__title{
+    margin-right: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: right;
+}
+.header-menu__title--hidden{
+    display: none;
+}
+/*          MAIN        */
+
+.main-page{
+    background-color: #F8F8F8;
+    padding: 24px 0;
+}
+.main-page__title{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+}
+
+.title{
+    padding-left: 12px;
+    border-left: 4px solid #41F6D7;
+}
+
+.switcher-menu{
+    margin: 32px 0;
+    padding-left:24px;
+    height: 45px;
+}
+
+.switcher-menu__list{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.switcher-menu__item{
+    white-space: nowrap;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.switcher-menu__item--active{
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+.about{
+    padding-bottom: 35px;
+}
+
+.about__box{
+    display: grid;
+    justify-items: center;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.about__image{
+    order: 1;
+    width: 320px;
+    height: 176px;
+    justify-self: end;
+}
+
+.about__caption-box{
+    width: 288px;
+    padding: 0 16px;
+    justify-self: start;
+    
+}
+
+.about__caption-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+}
+
+.about__caption-text-1{
+    margin-bottom: 16px
+}
+.about__caption-text-2{
+    margin-top: 4px;
+    margin-bottom: 16px
+}
+.about__caption-text--hidden{
+    display: none;
+}
+.about__caption-text-end--hidden{
+    display: none;
+}
+
+.about__button{
+    background: url("icons/arrow.svg") no-repeat;
+}
+
+.about__button-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding-left: 32px;
+}
+
+@media (min-width: 720px) {
+    body{
+    }
+    .header-menu__cell--hidden{
+        display: block;
+    }
+    .title{
+        padding-left: 20px;
+    }
+
+    .about__box{
+        grid-template-columns: 1fr 1fr;
+        padding-left: 24px;
+        padding-right: 40px;
+        gap: 48px;
+    }
+    .about__caption-box{
+        padding: 0;
+        padding-top: 8px;
+        width: 312px;
+    }
+
+    .about__caption-text--hidden{
+        display: block;
+    }
+
+    .about__image{
+        border-radius: 8px;
+        width: 360px;
+        height: 208px;
+        align-self: flex-end;
+    }
+
+}
+
+@media (min-width: 1120px) {
+    body{
+        overflow: visible;
+        height: 535px;
+    }
+    .header-page{
+        background-color: #F8F8F8;
+        padding-left: 0;
+        padding-bottom: 8px;
+    }
+    .title{
+        padding-left: 30px;
+    }
+    .header-page__title--hidden{
+        display: block;
+    }
+    .header-menu__list--grey-line::before{
+        display: none;
+    }
+    .logo-menu{
+        display: none;
+    }
+    .header-menu__cell--hidden{
+        display: none;
+    }
+    .header-menu__title--hidden{
+        display: block;
+    }
+    .main-page{
+        padding-top: 0;
+    }
+    .main-page__title--hidden{
+        display: none;
+    }
+    .switcher-menu{
+        height: auto;
+        margin: 0;
+        margin-bottom: 10px;
+
+    }
+    .switcher-menu__list {
+        flex-wrap: wrap;
+    }
+    .about__box{
+        padding: 0;
+        padding-right: 28px;
+        padding-left: 34px;
+        gap:0;
+        justify-content: space-between;
+    }
+    
+    .about__image{
+        width: 531px;
+        height: 307px;
+    }
+    .about__caption-box{
+        width: 490px;
+    }
+    .about__caption-text-end--hidden{
+        display: inline;
+    }
+}
+

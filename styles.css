@@ -194,7 +194,8 @@
     background-position: center;
 }
 .sidebar-button:hover{
-    background-color: #c32d5a;
+
+    opacity: 0.8;
     transform: scale(0.9);
 }
 .header-sidebar__close-button{

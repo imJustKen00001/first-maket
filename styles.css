@@ -255,7 +255,7 @@
 .header-sidebar__menu-item:hover .header-sidebar__menu-link,
 .header-sidebar__menu-item--active .header-sidebar__menu-link{
     padding-left: 1.5625rem;
-    color: #7E7E82;
+    opacity: 0.5;
 }
 
 .header-sidebar__footer{
